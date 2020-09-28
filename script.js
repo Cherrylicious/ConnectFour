@@ -281,7 +281,7 @@
             winArrayDiagonallyL.length >= winCondition
         ) {
             console.log(
-                "Congratualtions, " + currentPlayer + " won",
+                "Congratulations, " + currentPlayer + " won",
                 { winArrayHorizontally },
                 { winArrayVertically },
                 { winArrayDiagonallyL },
@@ -301,7 +301,7 @@
                 : $("#Player2Name").addClass("winnerText");
 
             $("#winMessage").html(
-                "Congratualtions, " + currentPlayerName + " won!! 🥳🎉😎"
+                "Congratulations, " + currentPlayerName + " won!! 🥳🎉😎"
             );
             $("#winMessage").css("border", "8px dotted rebeccapurple");
 
