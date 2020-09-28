@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(213, 213, 248);
+    color: rebeccapurple;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+p {
+    color: #333399;
+    font-size: 4rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    width: 70vw;
+    background-color: rgb(205, 205, 248);
+    line-height: 4rem;
+    font-size: 2rem;
+    padding: 3% 0;
+}
+
+aside {
+    width: 30vw;
+    height: 100vh;
+    line-height: 4rem;
+    font-size: 2rem;
+    padding: 3%;
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    justify-content: space-evenly;
+}
+
+button {
+    font-family: inherit;
+    padding: 1% 4%;
+    font-size: 3rem;
+    background-color: rebeccapurple;
+    color: white;
+    border: none;
+    box-shadow: 0px 5px rgb(72, 30, 114);
+    outline: none;
+    margin: 1%;
+}
+
+button:active {
+    background-color: #333399;
+    transform: translateY(2px);
+    box-shadow: 0px 3px rgb(55, 21, 88);
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-self: left;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 1% 0;
+}
+
+.playerScore {
+    padding: 3%;
+}
+
+input {
+    border: none;
+    border-bottom: 1px Solid;
+    height: 2rem;
+    width: 67%;
+    font-size: inherit;
+    text-align: center;
+    border-bottom: 1px Solid rebeccapurple;
+    color: #333399;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 3px Solid rebeccapurple;
+}
+
+input:after {
+    outline: none;
+    border-bottom: 3px Solid rebeccapurple;
+}
+
+#game {
+    display: grid;
+    grid-auto-flow: column;
+    width: 70vw;
+    height: 80vh;
+    background-color: lavender;
+    padding: 4% 0.5%;
+    grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+    overflow: hidden;
+}
+
+.slot {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(
+        transparent 0%,
+        transparent 65%,
+        rebeccapurple 65%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.hole {
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: #fff;
+    color: rebeccapurple;
+    text-align: center;
+}
+
+.player1 {
+    background-color: steelblue;
+    transition: background-color 0.5s cubic-bezier(0.6, 0.7, 0.9, 1);
+}
+
+.player2 {
+    background-color: navy;
+    transition: background-color 0.5s cubic-bezier(0.6, 0.7, 0.9, 1);
+}
+
+.winner {
+    border: 15px solid greenyellow;
+    animation: winnerCircle 1s infinite;
+}
+.winnerText {
+    color: rebeccapurple;
+    animation: winnerText 1s infinite;
+}
+
+#favicon {
+    position: fixed;
+    bottom: 3px;
+    left: 3px;
+}
+
+@keyframes winnerCircle {
+    0% {
+        border: 15px solid gold;
+    }
+    49% {
+        border: 15px solid greenyellow;
+    }
+    100% {
+        border: 15px solid gold;
+    }
+    50% {
+        border: 15px solid greenyellow;
+    }
+    0% {
+        border: 15px solid gold;
+    }
+}
+
+@keyframes winnerText {
+    0% {
+        border: 15px solid gold;
+    }
+    49% {
+        border: 15px solid greenyellow;
+    }
+    100% {
+        border: 15px solid gold;
+    }
+    50% {
+        border: 15px solid greenyellow;
+    }
+    0% {
+        border: 15px solid gold;
+    }
+}
